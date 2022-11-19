@@ -35,7 +35,7 @@ class SharedPreferencesRepository implements HomeRepository {
 
     try {
       users.add(model.toJson());
-      prefs.setStringList('users', users);
+      await prefs.setStringList('users', users);
       return true;
     } catch (e) {
       rethrow;
